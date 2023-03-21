@@ -37,7 +37,7 @@ export const useSongStore = defineStore('song', {
     },
     playOrPauseThisSong(artist, track) {
       if (!this.audio || !this.audio.src || (this.currentTrack.id !== track.id)) {
-        this.loadSong(artist.track)
+        this.loadSong(artist, track)
         return
       } 
       this.playOrPauseSong()
@@ -66,5 +66,6 @@ export const useSongStore = defineStore('song', {
       this.currentArtist = null
       this.currentTrack = null
     }
-  }
+  },
+  persist: true
 })
