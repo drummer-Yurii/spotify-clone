@@ -99,5 +99,5 @@ let openMenu = ref(false);
   <RouterView />
   <div class="mb-[100px]"></div>
  </div>
- <MusicPlayer />
+ <MusicPlayer v-if="currentTrack" />
 </template>
