@@ -43,15 +43,13 @@ onMounted(() => {
                 <Pause v-else fillColor="#FFFFFF" :size="25" @click="useSong.playOrPauseSong()" />
             </div>
             <div v-else class="text-white font-semibold w-[40px] ml-5">
-                <span :class="{'text-green-500': currentTrack && currentTrack.name === track.name}">
+                <span :class="{ 'text-green-500': currentTrack && currentTrack.name === track.name }">
                     {{ index }}
                 </span>
             </div>
             <div>
-                <div 
-                    :class="{ 'text-green-500': currentTrack && currentTrack.name === track.name }"
-                    class="text-white font-semibold"
-                >
+                <div :class="{ 'text-green-500': currentTrack && currentTrack.name === track.name }"
+                    class="text-white font-semibold">
                     {{ track.name }}
                 </div>
                 <div class="text-sm font-semibold text-gray-400">{{ artist.name }}</div>
